@@ -20,7 +20,7 @@ default["openvpn"]["signing_ca_key"]  = "#{node["openvpn"]["key_dir"]}/ca.key"
 default["openvpn"]["signing_ca_cert"] = "#{node["openvpn"]["key_dir"]}/ca.crt"
 default["openvpn"]["routes"] = [
                                 "push route 10.0.0.0 255.255.0.0",
-                                "\"dhcp-option DNS 172.16.0.23\""
+                                "push \"dhcp-option DNS 172.16.0.23\""
                                ]
 default["openvpn"]["script_security"] = 1
 default["openvpn"]["user"] = "nobody"
