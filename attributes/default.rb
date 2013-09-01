@@ -13,7 +13,7 @@ default["openvpn"]["subnet"]  = "10.8.0.0"
 default["openvpn"]["netmask"] = "255.255.0.0"
 
 # Endpoint
-default["openvpn"]["gateway"] = "vpn.example.com"
+default["openvpn"]["gateway"] = "54.238.48.61"
 default["openvpn"]["log"]     = "/var/log/openvpn.log"
 default["openvpn"]["key_dir"] = "/etc/openvpn/keys"
 default["openvpn"]["signing_ca_key"]  = "#{node["openvpn"]["key_dir"]}/ca.key"
