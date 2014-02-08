@@ -6,21 +6,21 @@
 
 # Listen IP
 default["openvpn"]["local"]   = "0.0.0.0"
-default["openvpn"]["proto"]   = "udp"
+default["openvpn"]["proto"]   = "tcp"
 default["openvpn"]["port"]    = "1194"
 default["openvpn"]["type"]    = "server"
 default["openvpn"]["subnet"]  = "10.8.0.0"
 default["openvpn"]["netmask"] = "255.255.0.0"
 
 # Endpoint
-default["openvpn"]["gateway"] = "54.238.48.61"
+default["openvpn"]["gateway"] = "165.225.150.66"
 default["openvpn"]["log"]     = "/var/log/openvpn.log"
 default["openvpn"]["key_dir"] = "/etc/openvpn/keys"
 default["openvpn"]["signing_ca_key"]  = "#{node["openvpn"]["key_dir"]}/ca.key"
 default["openvpn"]["signing_ca_cert"] = "#{node["openvpn"]["key_dir"]}/ca.crt"
 default["openvpn"]["routes"] = [
                                 "push route 10.0.0.0 255.255.0.0",
-                                "push \"dhcp-option DNS 172.16.0.23\"",
+                                "push \"dhcp-option DNS 8.8.4.4\"",
                                 "push \"redirect-gateway def1\""
                                ]
 default["openvpn"]["script_security"] = 1
